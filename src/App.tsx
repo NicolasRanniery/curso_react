@@ -1,16 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
-function App() {
-  const [counter, setCounter] = useState(0);
-
+export function App() {
   return (
-    <div className="bg-gray-800 flex min-h-svh flex-col items-center justify-center">
-      <Button onClick={() => setCounter((counter) => counter + 1)}>
-        O valor é: {counter}
-      </Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
