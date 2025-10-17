@@ -53,8 +53,9 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-300">
       <Header />
-      <div className="flex-grow flex items-center justify-center bg-gray-300">
-        <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
+      <div className="flex-grow flex items-center justify-center relative">
+        <div className="absolute inset-0 bg-[url('./assets/paper.jpg')] bg-cover bg-center opacity-30"></div>
+        <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md relative z-10">
           <form onSubmit={handleSubmit(onSubmit)}>
             <FieldGroup>
               <FieldSet>
